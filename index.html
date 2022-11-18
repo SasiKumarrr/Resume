@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main/css/all.min.css">
+    <link rel="stylesheet" href="resume.css">
+    <title>sk.resume</title>
+    <style>
+        /*------------------------------style---------------------*/
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            width:100%;
+            height:100%;
+            font-family: Helvetica;
+        }
+        /*------------container-----------------*/
+        .container{
+            display:flex;
+            justify-content:space-between;
+        }
+        .container h4{
+            color: blue;
+            font-weight:bold;
+            /*font-size:17px;*/
+        }
+        /*-----------------------left black box-----------------*/
+        .left{
+            width:40%;
+            color: antiquewhite;
+            height:100%;
+            border:1px black solid;
+            background:black;
+            border:none;
+        }
+        /*-----------------------photo and words---------------*/
+        .img{
+            display:flex;
+            width:100%;
+            justify-content:center;
+            padding-bottom:5px;
+        }
+        .img img{
+          
+            margin-top:5px;
+            width:100px;
+            height:110px;
+            border-radius:50%;
+           //margin-left:40%;
+           //margin-top:20px;
+        
+        }
+        .left .name{
+            text-align:center;
+            font-size:100%;
+        }
+        .left .cse{
+            margin-top:8px;
+            text-align:center;
+            padding-bottom:30px;
+        }
+        /*.top{
+            display: flex;
+            text-align: center;
+            justify-content:center;
+            width:100%;
+        }*/
+       
+/*--------------------------contact info-------------------------*/
+       /* .left ul{
+            display: block;
+        }*/
+        .list{
+            margin-left:33px;
+            list-style:none;
+        }
+        .list i{
+            padding-bottom:10px;
+            /*padding-left:3px;*/
+        }
+        .list a{
+            text-decoration:none;
+            color:red;
+        }
+        .contact{
+            padding-bottom:8px;
+        }
+        /*.list span{
+            font-size:17px;
+        }*/
+
+/*-----------------------------table-----------------------------*/
+       
+        table{
+            border:1px white solid;
+            width:70%;
+            border-collapse: collapse;
+            margin-left:60px;
+        }
+        .box{
+            display:none;
+        }
+        .table h5,h6,p{
+            margin-left:33px;
+        }
+        .table h5{
+            color:red;
+            padding-bottom:4px;
+        }
+        .table p{
+            color: cyan;
+            padding-bottom:22px;
+            font-size:95%;
+        }
+        .table h6{
+            font-size:96%;
+        }
+
+        th{
+            color:grey;
+        }
+        td,th{
+            text-align:center;
+            border-bottom:1px white solid;
+            border-right:1px white solid;
+            padding:20px 0px;
+        }
+        /*-----------------area of interest----------*/
+        .interest{
+            list-style: square;
+        }
+        .interest li{
+            padding-bottom:7px;
+        }
+        .border{
+            width:100%;
+            border-bottom:1px white dotted;
+        }
+        /*----------------------------------hobbies-----------------*/
+        .hobbies{
+            padding-bottom:2%;
+        }
+        .hobbies li{
+            padding-bottom:5px;
+        }
+        /*-----------------------------right box------------------*/
+        /*---------------------------skills---------------*/
+        .skill{
+            list-style: disc;
+            display: block;
+        }
+        .skill li{
+            margin-left:40px;
+            padding-bottom:10px;
+        }
+        .skill .percent{
+            position: relative;
+            width:80%;
+            height:9px;
+            background:rgb(231, 225, 225);
+            display:block;
+            border-radius:25px;
+        }
+        .skill .percent div{
+            border-radius:25px;;
+            position:absolute;
+            left:0;
+            top:0;
+            height:100%;
+            background:skyblue;
+        }
+        /*----------------------------right-------------*/
+        .new{
+            background:black;
+            color:white;
+        }
+        .right{
+            width:59%;
+            height:100%;
+            border:1px black solid;
+            border:none;
+            position: relative;
+        }
+        .right p{
+            margin-left:25px;
+        }
+        .right .title{
+               color:darkmagenta;
+               margin-left:22px;
+        }
+        .left .hobbies,.left .interest,.right .extra{
+            margin-left:40px;
+        }
+      
+       
+       /*----------------------------personality trait------------*/
+        .right .personality{
+             margin-left:40px;
+        }
+        .personality li{
+            padding-bottom:5px;
+        }
+        .light{
+            display:none;
+        }
+        .final{
+            padding-bottom:4%;
+        }
+        @media screen and (max-width:1134px){
+            .container{
+            display:flex;
+            justify-content:space-between;
+            flex-direction:column;
+        }
+        .light{
+            display:block;
+        }
+        .left{
+            width:100%;
+            color: antiquewhite;
+            height:100%;
+            border:1px black solid;
+            background:black;
+        }
+       .right{
+            width:100%;
+        }
+        table{
+            margin-left:14%;
+        } 
+        .box{
+            display:block;
+        }
+        .table{
+            display:none;
+        }
+        }
+        @media screen and (max-width:567px){
+            .box{
+            display:none;
+        }
+        .table{
+            display:block;
+        }
+        .right .light{
+         position: absolute;
+         top:2%;
+         left:90%;
+        //transform:translate(-50%,-50%);
+}  
+input[type="checkbox"]{
+    position:relative;
+    cursor: pointer;
+    width:30px;
+    height:15px;
+    background:#c6c6c6;
+    -webkit-appearance:none;
+    border-radius:20px;
+    box-shadow:inset 0 0 5px rgba(0,0,0,.2);
+    //transition:.5s;
+    /*outline:none;*/
+ }
+ input[type="checkbox"]:before{
+             position:absolute;
+             content:'';
+             width:15px;
+             height:15px;
+             border-radius:20px;
+             background:#fff;
+             top:0;
+             left:0;
+             box-shadow:0 2px 5px rgba(0,0,0,.2);
+             transform:scale(1.2);
+             transition:.5s;
+ }
+ input:checked[type="checkbox"]:before{
+     left:14px;
+ }
+        }
+
+
+       /* @media screen and (max-width:475px){
+            table{
+            margin-left:10%;
+        }
+        }
+        @media screen and (max-width:423px){
+            table{
+            margin-left:8%;
+        }
+        }
+        @media screen and (max-width:413px){
+            table{
+            margin-left:3%;
+        }
+    }
+        @media screen and (max-width:360px){
+            table{
+            margin-left:1%;
+        }
+        }*/
+
+
+    </style>
+</head>
+<body>
+     <div class="container">
+<!-------------------------first box------------------------------->
+         <div class="left">
+             <div class="img">
+        <a href="skkkkkkk.jpeg">
+         <img src="skkkkkkk.jpeg" class="size"></a>
+         </div>
+         <h3 class="name">S.Sasikumar</h3>
+         <h4 class="cse">CSE-1V</h4>
+<!--contacts-->
+         <h4 class="contact" style="color:blue;">Contact Info:</h4>
+         <ul class="list">
+            <!-- <span><a href="#">&#128222;</a></span>
+             <li style="display:inline-block;">9787051790</li>
+             <br>
+             <span><a href="#">&#9993;</a></span>
+             <li style="display:inline-block">sksasi20010615@gmail.com</li>
+             <br>
+             <span><a href="#">&#x1f4cc;</a></span>
+             <li class="place" style="display:inline-block;">Nagalapuram,India</li>
+        </ul> <br>-->
+            <a href="#"><i class="fa fa-phone" style="color:green;font-size:16px;"></i></a>
+            <span for="no" style="padding-left:6px;">9787051790</span><br>
+            <a href="#"><i class="fa fa-envelope" ></i></a>
+            <span for="no" style="padding-left:6px;font-size:16px;">Sksasi20010615@gmail.com</span><br>
+            <a href="#"><i class="fa fa-map-marker"  style="color:goldenrod"></i></a>
+            <span for="no" style="padding-left:10px;font-size:16px;">Nagalapuram,India</span><br>
+         </ul>   
+        <br>
+       <div style="border-bottom:1px wheat dotted"></div><br>
+<!--table-->
+        <h4 style="color:blue;">Education:</h4><br>
+        <div class="table">
+        <h5>2011-2016</h5>
+        <h6>T.D.T.A Jeyaraj Anna Packiyam Higher Secondary School</h6>
+        <p>Score:88%</p>
+        <h5>2016-2018</h5>
+        <h6>Sharon Matric Higher Secondary School</h6>
+        <p>Score:79%</p>
+        <h5>2018-2022</h5>
+        <h6>Dr.Gu.Pope College Of Engineering</h6>
+        <p>Score:72%</p>
+        <div style="border-bottom:1px white dotted;"></div>
+        </div>
+    
+        <div class="box">
+        <table>
+            <head>
+                <tr>
+                 <th>Qualifications</th>
+                 <th>Institution</th>
+                 <th>Year Of Passing</th>
+                 <th>% Of Marks<span style="color:rosybrown">/CGPA</span></th>
+                 </tr>
+            </head>
+            <body>
+                 <tr>
+                     <td>B.E</td>
+                 <td>Dr.Gu.Pope College Of Engineering</td>
+                 <td>2022</td>
+                 <td>72%</td>
+                 </tr>
+                 <tr>
+                    <td>HSC</td>
+                <td>Sharon Matric Higher Secondary School</td>
+                <td>2018</td>
+                <td>964</td>
+                </tr>
+                <tr>
+                    <td>SSLC</td>
+                <td>T.D.T.A Jeyaraj Anna Packiyam Higher Secondary School</td>
+                <td>2016</td>
+                <td>440</td>
+                </tr>
+
+            </body>
+        </table><br><br>
+        <div style="border-bottom:1px white dotted;"></div>
+        </div>
+        
+<!--hobbies-->
+<br>
+<!--Area of interest-->
+      <div class="border">
+      <h4>Area of Interest</h4><br>
+      <ul class="interest">
+      <li>Web designing</li>
+      <li>Traveling</li>
+      </ul><br>
+      </div>
+         <br>
+        <h4>Hobbies</h4>
+        <ul class="hobbies">
+            <br>
+            <li>Playing games</li>
+            <li>Listening Music</li>
+            <li>Drawing</li>
+        </ul>
+
+
+
+         </div>
+<!---------------------------second box----------------------------------> 
+        <div class="right" id="right">
+            <div class="light">
+                <input type="checkbox" onclick="toggles()" class="lights">
+            </div>
+            <br>
+         <h4>Career Objective</h4><br>
+         <p>To work in an organization where i can acquire new knowledge,sharpen my skills and put my effort into achieving organisation as well as personal goals</p><br>
+  
+<!----------------------skill set--------------------->
+    <h4 style="color: blue;">Skill Set:</h4>
+    <ul class="skill">
+        <br>
+        <li>HTML
+        <span class="percent">
+            <div style="width:90%"></div>
+        </span></li>
+        <li>CSS
+        <span class="percent">
+            <div style="width:85%;"></div>
+        </span></li>
+        <li>Java Script
+        <span class="percent">
+            <div style="width:50%;"></div>
+        </span></li>
+        <li>Python
+        <span class="percent">
+            <div style="width:30%;"></div>
+        </span></li>
+    </ul>
+    <br>
+
+       <h4>Project</h4><br>
+       <div class="title"><span style="color:yellowgreen;font-weight:bold">Title:</span>Duplicate detection of online shopping data using schema matching</div>
+         <p class="game" style="padding-top:6px;">we created a E-Commerce online shopping website with the help of ASP.NET framework.In that we used the concept of c# language to connect the database MS SQL server</p><br>
+   <h4>Co-Curricular</h4><br>
+   <ul class="extra">
+       <li>Successfully Completed three days 'Machine Learning' internship</li>
+       <li style="padding-top:6px;">Participated in "Science and Technology" event conducted by National College of Engineering</li>
+   </ul><br>
+   <h4>Extra-Curricular</h4><br>
+   <ul class="extra">
+       <li>Volunteered cultural and technical events</li>
+       <li style="padding-top:6px;">Given blood for Govt hospital Blood bank in feb 2019</li>
+   </ul><br>
+   <h4>Personality Traits</h4><br>
+   <ul class="personality">
+       <li>Empathetic</li>
+       <li>Honest</li>
+       <li>Flexible</li>
+   </ul><br>
+   <h4>Declaration</h4><br>
+   <p class="final">I hereby declare that the above-mentioned information is true to best of my knowledge and i bear the responsiblity for the correctness of the above-mentioned particulars</p><br>
+       
+
+       
+
+
+     </div>
+     <script>
+         var value=document.getElementById("right");
+         function toggles(){
+             /*if(value.getAttribute("class")=="new"){
+                 value.setAttribute("class",'');
+             }
+             else{
+                 value.setAttribute("class","new")
+             }*/
+             value.classList.toggle("new")
+         }
+
+
+
+     </script>
+         
+    
+</body>
+</html>
